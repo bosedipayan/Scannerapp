@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> App Scanner </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap-grid.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css"
+        integrity="sha512-AGmpdsTqvAh2GvTWzVhhJ9VqQb1eAXwOM7uiWtv0DzcnGaGWy98K51z2cK5OG3gp4NB1HbMaD7p0MeO9kE7E3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" type="text/css" href="D:\Projects\Promethus\style.css">
+    
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #3277ef;
+    font-weight: bolder;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #666;
+}
+
+header .navbar a:hover {
+    color: #3277ef;
+}
+
+header #menu-bar{
+    font-size: 3rem;
+    color: #666;
+    cursor: pointer;
+    border: .1rem solid #666;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color: #333;
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: #666;
+    padding: 1.5rem 0;
+}
+
+.home .image{
+    flex: 1 1 40rem;
+}
+
+.home .image img{
+    width: 100%;
+    padding: 1rem;
+}
+
+.home .content .btn{
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: .8rem 3rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+    color: #3277ef;
+    border: .2rem solid #3277ef;
+}
+
+
+.home .content .btn:hover{
+    color: #fff;
+    background: #3277ef;
+}
+
+/* features */
+
+.features .heading{
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+}
+
+ .features.heading span {
+    color: #3277ef;
+}
+
+.features .specialities{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.features .specialities .content{
+    flex: 1 1 40rem;
+    padding-top: 4rem;
+}
+
+.features .specialities .content h3{
+    font-size: 33px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.features .specialities .content p{
+    color: #666;
+    font-size: 15px;
+    letter-spacing: normal;
+    line-height: 2.7rem;
+}
+
+.features .specialities .content .btn1{
+    font-size: 2rem;
+    padding: 2.2rem 0;
+}
+
+.features .specialities .image{
+    flex: 1 1 40rem;
+}
+
+.features .specialities .image img{
+    width: 100%;
+    height: 65vh;
+}
+
+.features .specialities .people{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+
+.download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 8rem 0;
+}
+
+
+.download .container{
+    flex: 1 1 40rem;
+    padding-top: 6rem;
+}
+
+.download .container h3{
+    font-size: 4rem;
+    color: rgb(40, 36, 36);
+    padding: 1.5rem 0;
+}
+
+.download .container p{
+    color: #666;
+    font-size: 1.8rem;
+    padding-top: 2.7rem;
+    line-height: 2.9rem;
+}
+
+.download .imgif{
+    flex: 1 1 40rem;
+}
+
+.download .imgif img{
+    width: 100%;
+    height: 70vh;
+}
+
+.download .avail{
+    margin-top: 3.5rem;
+}
+
+.download .avail img{
+    padding: 0 1.5rem;
+}
+
+.footer{
+    background: #edeef7;
+}
+
+.footer .box-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+
+.footer .box-container .box {
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+
+.footer .box-container .box .share a {
+    height: 4rem;
+    width: 4rem;
+    padding: 1rem 0;
+    margin-left: -1rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #666;
+    font-size: 2.5rem;
+}
+
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+
+.footer .box-container .box p {
+    font-size: 1.3rem;
+    color: #666;
+    padding: .7rem 0;
+}
+
+.footer .box-container .box .links {
+    padding: 1rem 0;
+}
+
+
+.footer .box-container .box .links a {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    color: #666;
+}
+
+
+.footer .box-container .box .links a:hover {
+    text-decoration: underline;
+    color: var(--green);
+}
+
+
+
+.footer .credit {
+    padding: 2.5rem 1rem;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.footer .credit span{
+    color: #3277ef;
+}
+
+
+@media(max-width:991px) {
+    section {
+        padding: 2rem;
+    }
+}
+
+@media(max-width:768px) {
+    .footer{
+        text-align: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"> <i class='bx bxs-carousel'></i> App Scanner </a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#download">Download</a>
+        </nav>
+
+    </header>
+
+    <section class="home" id="home">
+            <div class="content">
+                <h3>Card Scanner</h3>
+                <p>The ultimate electronic visiting card solution, at your fingertips.
+                    Centralized card management software,
+                    with all information and data under one roof.
+                </p>
+
+                <a href="#" class="btn"> Check now </a>
+            </div>
+            <div class="image">
+                <img src="./img/home.jpg" alt="home-bg">
+            </div>
+    </section>
+
+    <section class="features" id="features">
+
+        <h1 class="heading"> Our <span> Features </span> </h1>
+        <div class="specialities">
+            <div class="content">
+                <h3>Card Design Suites</h3>
+                <p> It is one-of-a-kind software puts you in full control—with popular themes, fonts, colors & formats. The Card Design Suite
+                takes customization to a new level & elevates L-Card Pro far above the competition. Even if you have a favorite background or existing paper
+                card, easily upload and transform it to an L-Card in an instant.</p>
+
+                <a href="#" class="btn1">Learn more <i class="fas fa-angle-right"></i> </a>
+            </div>
+        
+            <div class="image">
+                <img src="./img/Card suite.png" alt="Card-suite">
+            </div>
+        </div>
+
+        <div class="specialities">
+        
+            <div class="image">
+                <img src="./img/data integration.png" alt="data-integration">
+            </div>
+
+            <div class="content">
+                <h3>Data Integration</h3>
+                <p> Export Cards directly to Salesforce, Google Contacts and Outlook.  By the use of it, one can manage the
+                     contacts, Manage Leads, Grow Network, Include CRM, and much more.
+                      Generate CSV files for selected cards, groups or
+                entire libraries and upload data into your favorite CRM. </p>
+            
+                <a href="#" class="btn1">Learn more <i class="fas fa-angle-right"></i> </a>
+            </div>
+        </div>
+
+        <div class="specialities">
+
+            <div class="content">
+                <h3>Custom QR Code</h3>
+                <p> Create custom QR code designs for your business cards. Print the code on promotional materials for
+                    attractive and
+                    innovative business card sharing.</p>
+            
+                <a href="#" class="btn1">Learn more <i class="fas fa-angle-right"></i> </a>
+            </div>
+
+            <div class="image">
+                <img src="./img/handscanner.jpg" alt="scanner">
+            </div>
+        
+        </div>
+
+        <div class="specialities">
+
+            <div class="image">
+                <img src="./img/istockphoto-1198628920-612x612.jpg" alt="contact1" >
+            </div>
+
+            <div class="content">
+                <h3>Contacts</h3>
+                <p> Add your personal or company card to Contact Pages on websites using the "smart" buttons.
+                    Acccess to contacts, details of an individual. </p>
+        
+                <a href="#" class="btn1">Learn more <i class="fas fa-angle-right"></i> </a>
+            </div>
+        
+        </div>
+
+    </section>
+
+    <section class="download" id="download">
+        <div class="container">
+            <h3>Download the app</h3>
+            <p>App Scanner is the best card scanner app which helps you to be productive and boost your performance by 30%.</p>
+            
+            <div class="avail">
+                <img src="./img/playstore.png" alt="playstore">
+                <img src="./img/appstore.png" alt="appstore">
+            </div>
+        </div>
+        <div class="imgif">
+            <img src="./img/81Au.gif" alt="gif">
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Follow Us</h3>
+                <div class="share">
+                    <a href="#" class="btn fab fa-facebook"></a>
+                    <a href="#" class="btn fab fa-twitter"></a>
+                    <a href="#" class="btn fab fa-instagram"></a>
+                    <a href="#" class="btn fab fa-youtube"></a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h3> Links </h3>
+                <div class="links">
+                    <a href="#">Features</a>
+                    <a href="#">Accuracy</a>
+                    <a href="#">FAQ's</a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h3> Products </h3>
+                <div class="links">
+                    <a href="#">Scanner</a>
+                    <a href="#">Card Suites</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Integration</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h3> Company </h3>
+                <div class="links">
+                    <a href="#">About us</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">DPA</a>
+                </div>
+            </div>
+        </div>
+    
+    
+        <h1 class="credit"> Created by <span> Our Special Partners </span> 
+            <br/> <i class="fas fa-copyright"></i> All rights Reserved </h1>
+    
+
+        <script src="D:\Projects\Promethus\script.js"></script>
+    
+    </section>
+
+
+</body>
+</html>
